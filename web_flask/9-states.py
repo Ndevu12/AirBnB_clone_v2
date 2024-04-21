@@ -13,13 +13,11 @@ def close(self):
     """ Method to close the session """
     storage.close()
 
-
 @app.route('/states', strict_slashes=False)
 def state():
     """Displays a html page with states"""
     states = storage.all(State)
     return render_template('9-states.html', states=states, mode='all')
-
 
 @app.route('/states/<id>', strict_slashes=False)
 def state_by_id(id):

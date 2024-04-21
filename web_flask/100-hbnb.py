@@ -15,7 +15,6 @@ def hbnb_filters():
     return render_template("10-hbnb_filters.html",
                            states=states, amenities=amenities)
 
-
 @app.teardown_appcontext
 def teardown(exc):
     """Remove the current SQLAlchemy session."""

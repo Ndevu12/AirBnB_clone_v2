@@ -6,7 +6,6 @@ from flask import render_template
 
 app = Flask(__name__)
 
-
 @app.route("/hbnb_filters", strict_slashes=False)
 def hbnb_filters():
     """Displays the main HBnB filters HTML page."""
@@ -14,7 +13,6 @@ def hbnb_filters():
     amenities = storage.all("Amenity")
     return render_template("10-hbnb_filters.html",
                            states=states, amenities=amenities)
-
 
 @app.teardown_appcontext
 def teardown(exc):
